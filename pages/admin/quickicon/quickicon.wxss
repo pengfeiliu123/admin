@@ -1,0 +1,14 @@
+/* pages/admin/quickicon/quickicon.wxss */
+.toWrite {
+width:100rpx;
+height:100rpx;
+display: block;
+/*background:url("/image/add.png") no-repeat;*/
+padding:0;
+background-size:cover;
+position:fixed;
+right:74rpx;
+bottom:100rpx;
+border-radius: 50%;
+z-index: 999;
+}

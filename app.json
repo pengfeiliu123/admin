@@ -1,0 +1,44 @@
+{
+  "pages":[
+
+    "pages/index/index",
+    "pages/admin/admin",
+    "pages/me/me",
+
+    "pages/product/product",
+    "pages/home/home",
+    "pages/detail/detail",
+
+
+    "pages/admin/product/product",
+    "pages/admin/quickicon/quickicon",
+    "pages/admin/quickicon/add",
+    "pages/admin/quickicon/modify"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#318efb",
+    "borderStyle": "#3891f8",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/icon_API.png",
+        "selectedIconPath": "images/icon_API_HL.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/wechat.png",
+        "selectedIconPath": "images/wechatHL.png",
+        "text": "Me"
+      }
+    ]
+  }
+}

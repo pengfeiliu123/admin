@@ -1,0 +1,29 @@
+<!--pages/detail/detail.wxml-->
+<view class="c-minheight wx-view_movie_top" data-c_e_id="wx_view_d4d10454">
+  <image class="wx-image_movie_cover" data-c_e_id="wx_image_3531ce9f" src="{{product.productImg}}" />
+</view>
+
+<view class="c-minheight wx-view_movie_info" data-c_e_id="wx_view_22939a03">
+  <view class="c-minheight wx-view_movie_score" data-c_e_id="wx_view_3d6933f0">
+    <text class="c-block wx-text_score_value" data-c_e_id="wx_text_20ab13fe">8.4</text>
+    <text class="c-block wx-text_score_stars" data-c_e_id="wx_text_d07763e8"></text>
+    <text class="c-block wx-text_score_uv" data-c_e_id="wx_text_b439aa5b"> 34776人</text>
+  </view>
+  <text class="c-block wx-text_title" data-c_e_id="wx_text_55c207ca">{{product.productName}}<br/>
+    </text>
+  <text class="c-block wx-text_description" data-c_e_id="wx_text_46bc700d">值得玩
+    </text>
+  <text class="c-block wx-text_description" data-c_e_id="wx_text01771f14">所属地区：(中国广东)
+    </text>
+  <text class="c-block wx-text_description" data-c_e_id="wx_textf1b12ef8">开放时间: 每天9：00-18：00
+    </text>
+</view>
+
+<view class="c-minheight wx-view_section" data-c_e_id="wx_view_a0074c12">
+  <text class="c-block wx-text_description" data-c_e_id="wx_text7bc03bd3">商品简介
+    </text>
+  <text class="c-block wx-text_content" data-c_e_id="wx_text_7c13baf3">{{product.productDes}}
+    </text>
+  <button class="wx-button_expand" data-c_e_id="wx_button_2a7a52be" hover-class="button-hover" plain="True" size="mini" type="default">展开
+  </button>
+</view>

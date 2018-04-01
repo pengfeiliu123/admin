@@ -1,0 +1,55 @@
+<!--pages/admin/quickicon/modify.wxml-->
+<view class='root-view'>
+  <scroll-view scroll-y style="height:{{windowHeight}}:px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <form bindsubmit="addQuickIcon" report-submit="true">
+      <view class="weui-dialog__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd">
+              <input class=".add-input-title" name="title" placeholder="请输入标题" value='{{rows.title}}'></input>
+            </view>
+          </view>
+        </view>
+        <!--<view class="weui-cells weui-cells_after-title">-->
+        <!--<view class="weui-cell">-->
+        <!--<view class="weui-cell__bd">-->
+        <!--<textarea class="weui-textarea" name="content" placeholder="请输入日记内容"-->
+        <!--style="height: 10.3em"></textarea>-->
+        <!--<view class="weui-textarea-counter">0/200</view>-->
+        <!--</view>-->
+        <!--</view>-->
+        <!--</view>-->
+
+        <view class="page-body">
+          <view class="btn-area">
+            <loading hidden="{{loading}}">
+              图片上传中...
+            </loading>
+            <button type="primary" bindtap="upImg">图片上传（支持多张）</button>
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-panel__hd">上传结果展示</view>
+              <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                  <view wx:if="{{changeImage}}" class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{urlArr}}"></image>
+                  </view>
+                  <view wx:else class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="{{rows.imageUrl}}"></image>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+            <view>
+              <button type="primary" bindtap="delImg">文件删除</button>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="add-submit-container">
+        <button class="add-button">取消</button>
+        <button class="add-button" type="primary" formType="submit">提交</button>
+      </view>
+
+    </form>
+  </scroll-view>
+</view>

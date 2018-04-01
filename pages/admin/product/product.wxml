@@ -1,0 +1,6 @@
+<!--pages/admin/product/product.wxml-->
+<text>pages/admin/product/product.wxml</text>
+
+<scroll-view scroll-y style="height:{{windowHeight}}:px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view id="green" wx:for="{{products}}" class="scroll-view-item scroll-view-item-type1">{{item}}</view>
+</scroll-view>

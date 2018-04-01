@@ -1,0 +1,18 @@
+<!--pages/product/product.wxml-->
+<view wx:for="{{products}}">
+  <navigator url='../detail/detail?id={{item.objectId}}'>
+    <view class='product_container'>
+      <view class='product_item_image_container'>
+        <image class='product_item_image' mode='aspectFill' src="{{item.productImg}}"></image>
+      </view>
+      <view class='product_item_text_container'>
+        <view class='product_item_text_name'>{{item.productName}}</view>
+        <view class='product_item_text_price'>{{item.productPrice}}</view>
+        <view class='product_item_text_des'>{{item.productDes}}</view>
+      </view>
+    </view>
+  </navigator>
+</view>
+<view wx:if="{{noMoreData}}" class='bottom-line'>
+  已经加载到底部了
+</view>

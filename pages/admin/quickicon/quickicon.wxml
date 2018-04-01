@@ -1,0 +1,67 @@
+<!--pages/admin/quickicon/quickicon.wxml-->
+<image class="toWrite" bindtap="toAddDiary" src="http://bmob-cdn-12920.b0.upaiyun.com/2017/07/17/a0c21208406c7ec2806156de66e68754.jpg"></image>
+<scroll-view scroll-y style="height:{{windowHeight}}:px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+  <view class="page__bd">
+
+    <!--<button type="primary" bindtap="toAddDiary" hover-class="other-button-hover"> 增加日记 </button>-->
+    <view class="weui-panel">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+            <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+            </view>
+          </view>
+          <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+            <icon class="weui-icon-search" type="search" size="14"></icon>
+            <view class="weui-search-bar__text">搜索</view>
+          </label>
+        </view>
+        <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+      </view>
+
+
+      <view class="weui-panel__hd">快捷通道列表</view>
+      <view class="weui-panel__bd">
+        <block wx:if="{{quickIconList.length>0}}">
+          <navigator class="weui-media-box weui-media-box_text" wx:for="{{quickIconList}}" wx:key="diaryItem" url="/pages/index/detail/index?objectId={{item.objectId}}">
+            <view class="weui-media-box__title weui-media-box__title_in-text">
+              {{item.title}}
+            </view>
+            <view class="weui-media-box__desc">
+              {{item.imageUrl}}
+            </view>
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+              <image class="weui-media-box__thumb" src="{{item.imageUrl}}"></image>
+            </view>
+
+            <view class="weui-media-box__info">
+              <view class="weui-media-box__info__meta weui-media-time">{{item.updatedAt}}</view>
+              <!-- <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">来源:开发者</view> -->
+              <view class="weui-media-box__info__meta weui-media-box__info__operate">
+                <icon type="cancel dels" size="16"></icon>
+                <text class="del" catchtap="deleteQuickIcon" data-id="{{item.objectId}}">删除</text>
+                <icon type="success edits" size="16"></icon>
+                <text catchtap="toModifyQuickIcon" data-id="{{item.objectId}}" data-content="{{item.imageUrl}}" data-title="{{item.title}}">编辑
+                                </text>
+              </view>
+            </view>
+          </navigator>
+        </block>
+        <block wx:else>
+          <view class="weui-media-box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">
+              暂无内容，请点击右下角添加
+            </view>
+            <view class="weui-media-box__desc"></view>
+
+          </view>
+        </block>
+
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

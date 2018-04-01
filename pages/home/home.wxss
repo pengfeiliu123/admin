@@ -1,0 +1,257 @@
+/* pages/home/home.wxss */
+
+.root-view {
+  width: 100%;
+  height: 100%;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.home-banner {
+  height: 300rpx;
+  width: 100%;
+}
+
+.home-banner-navigator {
+  display: block;
+  position: relative;
+}
+
+.home-banner-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.home-banner-title {
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  font-size: 20px;
+}
+
+.home-icons-container {
+}
+
+.home-quick-container {
+  padding: 15px 37.5rpx 5px;
+  padding-bottom: 5px;
+}
+
+.home-quick-grid {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  flex-wrap: wrap;
+}
+
+.home-quick-navigator {
+  min-width: 112.5rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.home-quick-title {
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+
+.home-quick-image {
+  width: 50px;
+  height: 50px;
+  display: block;
+  background-color: transparent;
+}
+
+.wx-view_BngLPK {
+  border-right-width: 1px;
+  border-right-color: rgba(237, 237, 237, 1);
+}
+
+.c-minheight {
+  min-height: 80px;
+}
+
+.wx-view_section {
+  padding: 20px 20px 0px;
+  padding-top: 20px;
+}
+
+.wx-view_section.section_movies {
+  padding-right: 0px;
+}
+
+.wx-view_setion_header {
+  justify-content: flex-start;
+  min-height: 35px;
+}
+
+.wx-navigator_more {
+  display: block;
+  float: right;
+}
+
+.wx-text_more {
+  font-size: 14px;
+  color: #1aad19;
+}
+
+.wx-text_more.margin-right {
+  margin-right: 20px;
+}
+
+.wx-text_setion_title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.wx-scroll-view_LmB3Jc {
+  width: 100%;
+}
+
+.wx-view_c3VPoR {
+  display: flex;
+  padding-right: 10px;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+
+.wx-navigator_movieitem {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.wx-image_movieitem_title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.wx-image_movieitem_cover {
+  width: 100px;
+  height: 140px;
+}
+
+.wx-image_movieitem_num {
+  color: rgb(168, 168, 168);
+  font-size: 12px;
+}
+
+.wx-navigator_movieitem {
+  margin-right: 10px;
+  width: 100px;
+}
+
+.wx-view_DUMhdo {
+  width: 100px;
+  height: 140px;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wx-text_mupjOe {
+  font-size: 16px;
+  font-weight: 400;
+  border-style: none none solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(221, 221, 221);
+  padding-bottom: 3px;
+  color: #666;
+}
+
+.wx-text_RwEVJZ {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+  margin-top: 3px;
+}
+
+
+.product_container {
+  padding: 10rpx;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-left: 12rpx;
+  margin-right:12rpx;
+  box-shadow: rgba(0, 0, 0, 0.239216) 2px 2px 2px 1px;
+  margin-top: 15rpx;
+  border-top:1rpx solid rgba(0,0,0,0.239);
+}
+
+.product_item_image_container {
+  float: left;
+  width: 220rpx;
+  height: 220rpx;
+  border: 1rpx solid #666;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.product_item_image {
+  width: 220rpx;
+  height: 220rpx;
+}
+
+.product_item_text_container {
+  height: 223rpx;
+  margin-left: 240rpx;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.product_item_text_name {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.product_item_text_price {
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  color: #f00;
+  margin-left: 10rpx;
+}
+
+.product_item_text_des {
+  height: 100rpx;
+  line-height: 35rpx;
+  font-size: 25rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.bottom-line{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+  margin-bottom:20rpx;
+  font-size: 25rpx;
+}

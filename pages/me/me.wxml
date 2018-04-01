@@ -1,0 +1,12 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+    <button bindtap="checkAdmin">Check Admin</button>
+    <view wx:if="{{result.isAdmin}}">
+        我是管理员
+        <button bindtap="goAdmin">Go Admin</button>
+    </view>
+    <view wx:else>
+        我不是管理员
+    </view>
+</view>
+

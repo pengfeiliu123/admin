@@ -1,0 +1,75 @@
+<!--pages/home/home.wxml-->
+<view class='root-view'>
+
+  <!--Banner-->
+  <swiper class="home-banner" autoplay='true' circular='true' indicator-color='rgb(255,0,0)' indicator-active-color='rgb(255,255,0)' indicator-dots="true" lower-threshold="50">
+    <swiper-item wx:for="{{banners}}">
+      <navigator class='home-banner-navigator' hover-class="navigator-hover" url="../detial/detial">
+        <image src="{{item.imageUrl}}" bindtap='' class="home-banner-img" mode='aspectFill'></image>
+        <view>
+          <text class='home-banner-title'>{{item.title}}</text>
+        </view>
+      </navigator>
+    </swiper-item>
+  </swiper>
+
+  <!--Icons-->
+  <view class="home-quick-container">
+    <view class="home-quick-grid">
+      <navigator wx:for="{{quickIcons}}" class="home-quick-navigator" hover-class="navigator-hover" url="../detail/detail?id={{item.objectId}}">
+        <image class="home-quick-image" mode="aspectFill" src="{{item.imageUrl}}"></image>
+        <text class="home-quick-title">{{item.title}}</text>
+      </navigator>
+    </view>
+  </view>
+
+
+  <!--HorizontalList-->
+
+  <view class="c-minheight wx-view_section section_movies" data-c_e_id="wx_viewd0d1e7ab">
+    <view class="c-minheight wx-view_setion_header" data-c_e_id="wx_view17c6c7d8">
+      <navigator class="wx-navigator_more" data-c_e_id="wx_navigator21772e50" hover-class="navigator-hover" url="../product/product">
+        <text class="c-block wx-text_more margin-right" data-c_e_id="wx_text546aae69">更多 ＞</text>
+      </navigator>
+      <text class="c-block wx-text_setion_title" data-c_e_id="wx_text658c17cc">最近加入</text>
+    </view>
+    <scroll-view class="c-minheight wx-scroll-view_LmB3Jc" data-c_e_id="wx_scroll_view_e56516f5" lower-threshold="50" scroll-x="True" style="overflow-x: auto; overflow-y: hidden; " upper-threshold="50">
+      <view class="c-minheight wx-view_c3VPoR" data-c_e_id="wx_view_6e47884d">
+
+        <navigator wx:for="{{products}}" class="wx-navigator_movieitem" data-c_e_id="wx_navigator_3c9ed006" hover-class="navigator-hover" url="../detail/detail?id={{item.objectId}}">
+          <image class="wx-image_movieitem_cover" data-c_e_id="wx_image_23806bb8" mode="scaleToFill" src="{{item.productImg}}" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; background-image: url(http://img3.imgtn.bdimg.com/it/u=729864406,3855214203&fm=26&gp=0.jpg); "
+          />
+          <text class="c-block wx-image_movieitem_title" data-c_e_id="wx_text_3324d8ba">{{item.productName}}</text>
+          <text class="c-block wx-image_movieitem_num" data-c_e_id="wx_text_803782ae">{{item.productPrice}}</text>
+        </navigator>
+
+        <navigator class="wx-navigator_movieitem" data-c_e_id="wx_navigator24e10d9b" hover-class="navigator-hover" open_type="switchTab" url="../product/product">
+          <view class="c-minheight wx-view_DUMhdo" data-c_e_id="wx_view_b66e3784">
+            <text class="c-block wx-text_mupjOe" data-c_e_id="wx_text_74893f4d">全部</text>
+            <text class="c-block wx-text_RwEVJZ" data-c_e_id="wx_text_6d040997">{{products.length}}个商品</text>
+          </view>
+        </navigator>
+      </view>
+    </scroll-view>
+  </view>
+
+
+  <!-- verticalList-->
+    <view wx:for="{{verticalProducts}}">
+    <navigator url='../detail/detail?id={{item.objectId}}'>
+      <view class='product_container'>
+        <view class='product_item_image_container'>
+          <image class='product_item_image' mode='aspectFill' src="{{item.productImg}}"></image>
+        </view>
+        <view class='product_item_text_container'>
+          <view class='product_item_text_name'>{{item.productName}}</view>
+          <view class='product_item_text_price'>{{item.productPrice}}</view>
+          <view class='product_item_text_des'>{{item.productDes}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{noMoreData}}" class='bottom-line'>
+    已经加载到底部了
+  </view>
+</view>
